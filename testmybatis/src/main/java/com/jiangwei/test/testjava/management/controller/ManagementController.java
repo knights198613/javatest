@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ManagementController {
     @RequestMapping("/login")
     public String toLogin() {
-        return "";
+        return "management/managementList";
     }
 }

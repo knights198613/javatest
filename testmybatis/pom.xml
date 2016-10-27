@@ -95,7 +95,7 @@
 
         <!--velocity-->
         <dependency>
-            <groupId>velocity</groupId>
+            <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
             <version>${velocity-version}</version>
         </dependency>

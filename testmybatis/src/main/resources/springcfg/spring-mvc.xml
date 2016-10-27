@@ -9,7 +9,20 @@
     <context:component-scan base-package="com.jiangwei.test.testjava.*"></context:component-scan>
 
 
-
+    <!--定义velocity模板的位置-->
+    <bean id="velocityConfiguer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/views"></property>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="suffix" value=".vm"></property>
+        <property name="contentType" value="text/html;charset=utf-8"></property>
+    </bean>
 
 
 
