@@ -9,10 +9,6 @@
     <context:component-scan base-package="com.jiangwei.test.testjava.*"></context:component-scan>
 
 
-    <bean>
-
-    </bean>
-
 
 
 
