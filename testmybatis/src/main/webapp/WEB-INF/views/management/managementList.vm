@@ -1,1 +1,6 @@
 Hello Velocity!!
+#set($n="Hello everyOne")
+#set($char=$n)
+#set($money.key=123)
+$char
+$money.key

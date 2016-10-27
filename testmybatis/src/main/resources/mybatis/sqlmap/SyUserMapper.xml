@@ -29,7 +29,7 @@
     </select>
 
     <insert id="insertUser" parameterType="SyUser">
-        INSERT INTO sy_user (user_name, user_code, age, sex, email, tel, degree, duty, born_city, pass_word, modify_user)
-        VALUES (#{userName}, #{userCode}, #{age}, #{sex}, #{email}, #{tel}, #{degree}, #{duty}, #{bornCity}, #{passWord}, #{modifyUser})
+        INSERT INTO sy_user (user_name, user_code, age, sex, email, tel, degree, duty, born_city, pass_word, modify_time, modify_user)
+        VALUES (#{userName}, #{userCode}, #{age}, #{sex}, #{email}, #{tel}, #{degree}, #{duty}, #{bornCity}, #{passWord}, #{modifyTime}, #{modifyUser})
     </insert>
 </mapper>

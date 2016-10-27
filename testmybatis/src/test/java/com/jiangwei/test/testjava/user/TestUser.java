@@ -44,7 +44,7 @@ public class TestUser {
         user.setDuty("普通工人");
         user.setBornCity("甘肃省兰州市榆中县");
         user.setPassWord("123456789");
-        //user.setModifyTime(new Date());
+        user.setModifyTime(new Date());
         user.setModifyUser("weijiang");
         Integer res = null;
         try {

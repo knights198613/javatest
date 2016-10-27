@@ -21,8 +21,8 @@ public class SyUserDaoImpl extends BaseDao implements SyUserDao {
 
     @Override
     public Integer insertUser(SyUser user) {
-        Integer res = this.getSqlSessionTemplate().insert("SyUser.insertUser", user);
-        throw new RuntimeException("insert error");
+        return this.getSqlSessionTemplate().insert("SyUser.insertUser", user);
+        //throw new RuntimeException("insert error");
         //return res;
     }
 }
