@@ -3,6 +3,7 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://www.example.com/schema/user"
             elementFormDefault="qualified">
+
     <xsd:element name="user">
         <xsd:complexType>
             <xsd:attribute name="id" type="xsd:string"/>

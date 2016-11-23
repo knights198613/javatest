@@ -18,7 +18,7 @@ public class Object2XmlDemo1 {
 
     public static void main(String[] args) {
         object2Xml();
-        xml2Object();
+        //xml2Object();
     }
 
 
@@ -47,8 +47,12 @@ public class Object2XmlDemo1 {
             File file = new File("D:\\xml\\customer.xml");
             JAXBContext jaxbContext = JAXBContext.newInstance(customer.getClass());
             Marshaller marshaller = jaxbContext.createMarshaller();
+            //设置生成的xml的文件编码格式
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+            //设置格式化输出xml文件
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            //设置生成的xml文件是否忽略文件头定义， false：不忽略  true:忽略文件头定义
+            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, false);
             marshaller.marshal(customer, file);
             marshaller.marshal(customer, System.out);
             System.out.println();
