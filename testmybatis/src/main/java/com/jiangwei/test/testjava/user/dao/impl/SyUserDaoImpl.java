@@ -16,7 +16,7 @@ public class SyUserDaoImpl extends BaseDao implements SyUserDao {
 
     @Override
     public SyUser findUserById(Integer id) {
-        return this.getSqlSessionTemplate().selectOne("SyUser.selectSyUserOne", SyUser.class);
+        return this.getSqlSessionTemplate().selectOne("SyUser.selectSyUserOne", id);
     }
 
     @Override
