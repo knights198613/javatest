@@ -18,7 +18,7 @@ public class Object2XmlDemo1 {
 
     public static void main(String[] args) {
         object2Xml();
-        xml2Object();
+        //xml2Object();
     }
 
 
