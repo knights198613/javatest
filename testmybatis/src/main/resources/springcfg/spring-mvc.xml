@@ -8,6 +8,11 @@
 
     <context:component-scan base-package="com.jiangwei.test.testjava.*.controller"></context:component-scan>
 
+    <!--定义静态资源防止拦截-->
+    <mvc:resources mapping="/js/*" location="/WEB-INF/statics/js/"/>
+    <mvc:resources mapping="/css/*" location="/WEB-INF/statics/css/"/>
+    <mvc:resources mapping="/image/*" location="/WEB-INF/statics/images/"/>
+    <mvc:resources mapping="/easyui/*" location="/WEB-INF/statics/easyui/"/>
 
     <!--定义velocity模板的位置-->
     <bean id="velocityConfiguer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -22,6 +27,13 @@
     <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
         <property name="suffix" value=".vm"></property>
         <property name="contentType" value="text/html;charset=utf-8"></property>
+    </bean>
+
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="contentType" value="text/html;charset=utf-8"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
 
 
