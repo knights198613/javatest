@@ -7,5 +7,9 @@
        http://www.example.com/schema/user
        http://www.example.com/schema/user.xsd">
 
-      <user:user id="user" userName="weijiang" email="jiangliuer@163.com"></user:user>
+      <!--<user:user id="user" userName="weijiang" email="jiangliuer@163.com"></user:user>-->
+
+      <bean id="car" class="com.jiangwei.test.springtest.factorybean.CarFactoryBean">
+            <property name="carInfo" value="法拉利,350,15,230.67"></property>
+      </bean>
 </beans>
