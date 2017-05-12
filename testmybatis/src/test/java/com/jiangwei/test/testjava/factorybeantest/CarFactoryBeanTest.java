@@ -38,7 +38,6 @@ public class CarFactoryBeanTest {
     @Test
     public void testGetFactoryBean() {
         CarFactoryBean carFactoryBean = (CarFactoryBean) context.getBean("car");
-
         try {
             Car car = carFactoryBean.getObject();
             System.out.println(JSON.toJSONString(car));
