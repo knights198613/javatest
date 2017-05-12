@@ -23,4 +23,12 @@ public class BasicTest {
 
         System.out.println(h);
     }
+
+
+    @Test
+    public void testStringIndexOf() {
+        String ss = "[456,3344,556,778,44,333]";
+        String flag = "45";
+        System.out.println(ss.contains(flag));
+    }
 }
