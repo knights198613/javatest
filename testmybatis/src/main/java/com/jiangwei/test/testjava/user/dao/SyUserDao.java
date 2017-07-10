@@ -13,7 +13,7 @@ public interface SyUserDao {
      * @param id
      * @return
      */
-    public SyUser findUserById(Integer id);
+    public SyUser selectSyUserOne(Integer id);
 
     /**
      * 插入用户信息

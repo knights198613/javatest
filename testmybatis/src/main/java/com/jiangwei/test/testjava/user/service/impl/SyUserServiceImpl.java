@@ -20,7 +20,7 @@ public class SyUserServiceImpl implements SyUserService {
     @Override
     @Transactional
     public SyUser findUserById(Integer id) {
-        return syUserDao.findUserById(id);
+        return syUserDao.selectSyUserOne(id);
     }
 
     @Override

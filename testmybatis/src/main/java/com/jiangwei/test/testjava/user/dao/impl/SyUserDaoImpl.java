@@ -15,13 +15,13 @@ import org.springframework.stereotype.Repository;
 public class SyUserDaoImpl extends BaseDao implements SyUserDao {
 
     @Override
-    public SyUser findUserById(Integer id) {
-        return this.getSqlSessionTemplate().selectOne("SyUser.selectSyUserOne", id);
+    public SyUser selectSyUserOne(Integer id) {
+        return this.getSqlSessionTemplate().selectOne("com.jiangwei.test.testjava.user.dao.SyUserDao.selectSyUserOne", id);
     }
 
     @Override
     public Integer insertUser(SyUser user) {
-        return this.getSqlSessionTemplate().insert("SyUser.insertUser", user);
+        return this.getSqlSessionTemplate().insert("com.jiangwei.test.testjava.user.dao.SyUserDao.insertUser", user);
         //throw new RuntimeException("insert error");
         //return res;
     }
