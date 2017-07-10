@@ -22,6 +22,19 @@
         <typeAlias type="com.jiangwei.test.testjava.user.domain.SyUser" alias="SyUser"></typeAlias>
     </typeAliases>
 
+    <!--用于学习mybatis源码，和spring继承后可删除environments元素配置-->
+        <environments default="development">
+           <environment id="development">
+               <transactionManager type="JDBC"></transactionManager>
+               <dataSource type="POOLED">
+                  <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                  <property name="url" value="jdbc:mysql://192.168.191.132:3306/sy_oil"></property>
+                  <property name="username" value="root"></property>
+                  <property name="password" value="weijiang"></property>
+               </dataSource>
+           </environment>
+        </environments>
+
     <mappers>
         <mapper resource="mybatis/sqlmap/SyUserMapper.xml"/>
     </mappers>
